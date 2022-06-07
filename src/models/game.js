@@ -25,7 +25,7 @@ class Game {
     }
 
     play() {
-        new Phaser.Game(this);
+        this.game = new Phaser.Game(this);
     }
 
     setSceneInit() {
@@ -64,14 +64,14 @@ class Game {
                 // blendMode: 'ADD'
             });
 
-            const logo = this.physics.add.image(0, 0, 'logo');
+            this.logo = this.physics.add.image(0, 0, 'logo');
 
-            logo.setScale(0.5);
-            logo.setVelocity(100, 100);
-            logo.setBounce(1, 1);
-            logo.setCollideWorldBounds(true);
+            this.logo.setScale(0.5);
+            this.logo.setVelocity(100, 100);
+            this.logo.setBounce(1, 1);
+            this.logo.setCollideWorldBounds(true);
 
-            emitter.startFollow(logo);
+            emitter.startFollow(this.logo);
 
             this.nochi = this.add.bitmapText(10, 50,
                 'shortStack', 'insert game here');

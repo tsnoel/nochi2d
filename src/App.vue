@@ -1,5 +1,5 @@
 <template>
-    <div id="game"></div>
+    <div @mousedown="down()" @mouseup="up()" id="game"></div>
 </template>
 
 <script>
@@ -9,10 +9,22 @@ export default {
     name: 'Nochi2D',
     data() {
         return {
+            test: undefined
         };
     },
     mounted() {
         gameModel.play();
+    },
+    methods: {
+        down() {
+            this.test = setInterval(() => {
+                gameModel.game.scene.keys.default.logo.angle -= 1;
+            }, 25);
+            console.log(gameModel.game.scene.keys.default.logo.angle);
+        },
+        up() {
+            clearInterval(this.test);
+        }
     }
 }
 </script>

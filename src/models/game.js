@@ -59,16 +59,16 @@ class Game {
             const particles = this.add.particles('nori');
 
             const emitter = particles.createEmitter({
-                speed: 100,
+                speed: 90,
                 scale: { start: 0.1, end: 0 }
                 // blendMode: 'ADD'
             });
 
             this.logo = this.physics.add.image(0, 0, 'logo');
 
-            this.logo.setScale(0.5);
-            this.logo.setVelocity(100, 100);
-            this.logo.setBounce(1, 1);
+            this.logo.setScale(0.4);
+            this.logo.setVelocity(20, 20);
+            this.logo.setBounce(0.7, 0.7);
             this.logo.setCollideWorldBounds(true);
 
             emitter.startFollow(this.logo);

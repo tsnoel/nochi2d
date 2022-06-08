@@ -1,5 +1,5 @@
 <template>
-    <div @mousedown="down()" @mouseup="up()" id="game"></div>
+    <div @mousedown="down()" @touchstart="down()" @mouseup="up()" @touchstop="up()" id="game"></div>
 </template>
 
 <script>
@@ -19,8 +19,9 @@ export default {
         down() {
             this.test = setInterval(() => {
                 gameModel.game.scene.keys.default.logo.angle -= 1;
+                gameModel.game.scene.keys.default.logo.y -= 1;
             }, 25);
-            console.log(gameModel.game.scene.keys.default.logo.angle);
+            // console.log(gameModel.game.scene.keys.default.logo);
         },
         up() {
             clearInterval(this.test);
@@ -33,7 +34,6 @@ export default {
 html,
 body,
 #app {
-    background: #000;
     height: 100%;
 }
 
@@ -48,9 +48,22 @@ body {
     justify-content: center;
 }
 
+#app::before {
+    background-image: url('../public/assets/bg.png');
+    background-repeat: repeat;
+    background-size: 10rem;
+    content: "";
+    filter: grayscale(100%) brightness(20%);
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
 #game {
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    z-index: 1;
 }
 </style>

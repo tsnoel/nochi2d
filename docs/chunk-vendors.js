@@ -8912,4 +8912,4 @@ var i={name:"matter-collision-events",version:"0.1.6",for:"matter-js@^0.14.2",si
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 var n=i(33),s=i(17),r={Actions:i(275),Animations:i(723),BlendModes:i(35),Cache:i(735),Cameras:i(738),Core:i(806),Class:i(0),Create:i(888),Curves:i(894),Data:i(896),Display:i(898),DOM:i(917),Events:i(918),Game:i(920),GameObjects:i(1011),Geom:i(483),Input:i(1308),Loader:i(1338),Math:i(193),Physics:i(1493),Plugins:i(1403),Renderer:i(1405),Scale:i(1412),ScaleModes:i(168),Scene:i(418),Scenes:i(1413),Structs:i(1415),Textures:i(1416),Tilemaps:i(1418),Time:i(1461),Tweens:i(1463),Utils:i(1481)};r.Sound=i(1492),r=s(!1,r,n),t.exports=r,e.Phaser=r}).call(this,i(600))}])}))},744:function(t,e){"use strict";e.Z=(t,e)=>{const i=t.__vccOpts||t;for(const[n,s]of e)i[n]=s;return i}}}]);
-//# sourceMappingURL=chunk-vendors.js.map?id=e4efeee6993594ff
+//# sourceMappingURL=chunk-vendors.js.map?id=6ef62032261767ee
